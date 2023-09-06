@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "build": "cd backend && npm install && cd ../gofood && npm install && npm run build",
-    "start": "node backend/index.js",
+    "start": "concurrently \"cd backend && nodemon index.js\" \"cd ./gofood && npm start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.1"
+  }
 }
