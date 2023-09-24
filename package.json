@@ -1,0 +1,16 @@
+{
+  "name": "gofood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install && cd backend && npm install && cd ../gofood && npm install && npm run build",
+    "start": "concurrently \"cd gofood && npm start\" \"cd ./backend && node index.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.1"
+  }
+}
