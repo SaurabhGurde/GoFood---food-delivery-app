@@ -91,7 +91,7 @@ router.post('/login', [
 router.post('/getuser', fetch, async (req, res) => {
     try {
         const userId = req.user.id;
-        const user = await User.findById(userId).select("-password") // -password will not pick password from db.
+        const user = await User.findById(userId)  // -password will not pick password from db.
         res.send(user)
     } catch (error) {
         console.error(error.message)

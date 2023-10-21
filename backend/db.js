@@ -7,7 +7,7 @@ async function mongoDB() {
     const fetched_data = await mongoose.connection.db.collection("food_items");
     const data = await fetched_data.find({}).toArray()
     const foodCategory = await mongoose.connection.db.collection("foodCategory");
-    const catData = await foodCategory.find({}).toArray()             
+    const catData = await foodCategory.find({}).toArray()            
       global.foodData = data;
       global.foodCategory = catData;
     
