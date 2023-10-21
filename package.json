@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm install && cd backend && npm install && cd ../gofood && npm run build",
-    "start": "concurrently \"cd gofood && npm run start\" \"cd ./backend && node index.js\"",
+    "build": "npm install && cd backend && npm install && cd ../gofood && npm run build && npm install serve",
+    "start": "concurrently \"cd gofood/build && serve -s\" \"cd ../backend && node index.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
