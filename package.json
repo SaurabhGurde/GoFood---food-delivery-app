@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npm install && cd backend && npm install && cd ../gofood && npm run build",
-    "start": "concurrently \"cd gofood/build && build\" \"cd ../backend && node index.js\"",
+    "start": "concurrently \"cd gofood && build\" \"cd ./backend && node index.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
