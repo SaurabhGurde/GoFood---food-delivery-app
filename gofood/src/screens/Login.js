@@ -7,7 +7,7 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(process.env.BASE_URL + "/api/auth/login", {
+    const response = await fetch(process.env.REACT_APP_SERVER_URL + "/api/auth/login", {
       // credentials: 'include',
       // Origin:"http://localhost:3000/login",
       method: 'POST',

@@ -8,7 +8,7 @@ export default function MyOrder() {
 
     const fetchMyOrder = async () => {
        // console.log(localStorage.getItem('userEmail'))
-        await fetch(process.env.BASE_URL + "/api/auth/myOrderData", {
+        await fetch(process.env.REACT_APP_SERVER_URL + "/api/auth/myOrderData", {
             // credentials: 'include',
             // Origin:"http://localhost:3000/login",
             method: 'POST',
