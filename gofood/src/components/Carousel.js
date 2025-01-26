@@ -5,7 +5,7 @@ export default function Carousel() {
     const[foodimg, setfoodimg] = useState([]);
 
     const loadImg = async ()=>{
-        let response = await fetch("http://localhost:5000/api/auth/foodData", {
+        let response = await fetch(process.env.REACT_APP_BASE_URL + "/api/auth/foodData", {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
