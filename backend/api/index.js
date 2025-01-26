@@ -1,3 +1,5 @@
+import bodyParser from "body-parser";
+
 global.foodData = require("../db")(function call(err, data, CatData) {
   if (err) console.log(err);
   global.foodData = data;
@@ -19,6 +21,8 @@ mongoDB();
 //   next();
 // });
 app.use(express.json());
+app.use(bodyParser.json({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 app.get("/", (req, res) => {
