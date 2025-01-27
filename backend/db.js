@@ -10,6 +10,7 @@ async function mongoDB() {
     const catData = await foodCategory.find({}).toArray()             
       global.foodData = data;
       global.foodCategory = catData;
+      return [data, catData]
     
   } catch (error) {
     console.error('Error connecting to MongoDB:', error.message);

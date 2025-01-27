@@ -7,6 +7,7 @@ const bcrypt = require('bcryptjs')
 var jwt = require('jsonwebtoken');
 const axios = require('axios')
 const fetch = require('../middleware/fetchdetails');
+const mongoDB = require('../db');
 const jwtSecret = "HaHa"
 // var foodItems= require('../index').foodData;
 // require("../index")
@@ -133,7 +134,8 @@ router.post('/foodData', async (req, res) => {
         // console.log( JSON.stringify(global.foodData))
         // const userId = req.user.id;
         // await database.listCollections({name:"food_items"}).find({});
-        res.send([global.foodData, global.foodCategory])
+        let foodData = await mongoDB()
+        res.send(foodData)
     } catch (error) {
         console.error(error.message)
         res.send("Server Error")
