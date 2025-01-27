@@ -15,8 +15,8 @@ export default function Home() {
 
     });
     response = await response.json()
-    setFoodItems(response[0])
-    setFoodCat(response[1])
+    setFoodItems(response[0] || [])
+    setFoodCat(response[1] || [])
 
   }
 
