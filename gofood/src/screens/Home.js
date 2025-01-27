@@ -15,13 +15,11 @@ export default function Home() {
 
     });
     response = await response.json()
-    console.log("first", response)
     setFoodItems(Array.isArray(response[0]) ? response[0] : [])
     setFoodCat(Array.isArray(response[1]) ? response[1] : [])
 
   }
-console.log("===>", foodCat,
-  foodItems)
+
   useEffect(() => {
     loadFoodItems()
   }, [])
